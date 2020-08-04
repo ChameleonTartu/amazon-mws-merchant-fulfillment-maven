@@ -1,0 +1,14 @@
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/mock/MWSMerchantFulfillmentServiceMock.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/GetServiceStatusAsyncSample.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/GetAdditionalSellerInputsAsyncSample.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/GetServiceStatusSample.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/GetEligibleShippingServicesAsyncSample.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/MWSMerchantFulfillmentServiceSampleConfig.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/CancelShipmentAsyncSample.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/GetAdditionalSellerInputsSample.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/GetShipmentAsyncSample.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/CreateShipmentSample.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/GetEligibleShippingServicesSample.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/CreateShipmentAsyncSample.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/CancelShipmentSample.java
+/Users/dmytro/Documents/projects/amazon-mws-merchant-fulfillment-maven/src/test/java/com/amazonservices/mws/merchantfulfillment/_2015_06_01/samples/GetShipmentSample.java

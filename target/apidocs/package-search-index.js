@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.amazonservices.mws.merchantfulfillment._2015_06_01"},{"l":"com.amazonservices.mws.merchantfulfillment._2015_06_01.model"}]
