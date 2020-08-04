@@ -1,5 +1,5 @@
 # amazon-mws-merchant-fulfillment-maven
-Mavenized version of Amazon MWS merchant-fulfillment API
+Mavenized version of Amazon MWS Merchant Fulfillment API
 
 [![Hits-of-Code](https://hitsofcode.com/github/chameleontartu/amazon-mws-merchant-fulfillment-maven)](https://hitsofcode.com/view/github/chameleontartu/amazon-mws-merchant-fulfillment-maven)
 [![Travis CI](https://travis-ci.org/ChameleonTartu/amazon-mws-merchant-fulfillment-maven.svg?branch=master)](https://travis-ci.org/ChameleonTartu/amazon-mws-merchant-fulfillment-maven)
