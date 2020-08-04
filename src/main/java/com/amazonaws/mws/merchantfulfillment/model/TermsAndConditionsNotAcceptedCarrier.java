@@ -71,7 +71,6 @@ public class TermsAndConditionsNotAcceptedCarrier extends AbstractMwsObject {
      *
      * @param carrierName
      *             The new value to set.
-     *
      * @return This instance.
      */
     public TermsAndConditionsNotAcceptedCarrier withCarrierName(String carrierName) {
@@ -80,10 +79,9 @@ public class TermsAndConditionsNotAcceptedCarrier extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -91,10 +89,9 @@ public class TermsAndConditionsNotAcceptedCarrier extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -102,22 +99,27 @@ public class TermsAndConditionsNotAcceptedCarrier extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "TermsAndConditionsNotAcceptedCarrier",this);
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param carrierName a {@link java.lang.String} object.
+     */
     public TermsAndConditionsNotAcceptedCarrier(String carrierName) {
         this.carrierName = carrierName;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public TermsAndConditionsNotAcceptedCarrier() {
         super();
     }

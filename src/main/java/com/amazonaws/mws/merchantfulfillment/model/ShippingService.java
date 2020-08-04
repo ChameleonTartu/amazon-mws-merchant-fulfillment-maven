@@ -112,7 +112,6 @@ public class ShippingService extends AbstractMwsObject {
      *
      * @param shippingServiceName
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingService withShippingServiceName(String shippingServiceName) {
@@ -153,7 +152,6 @@ public class ShippingService extends AbstractMwsObject {
      *
      * @param carrierName
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingService withCarrierName(String carrierName) {
@@ -194,7 +192,6 @@ public class ShippingService extends AbstractMwsObject {
      *
      * @param shippingServiceId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingService withShippingServiceId(String shippingServiceId) {
@@ -235,7 +232,6 @@ public class ShippingService extends AbstractMwsObject {
      *
      * @param shippingServiceOfferId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingService withShippingServiceOfferId(String shippingServiceOfferId) {
@@ -276,7 +272,6 @@ public class ShippingService extends AbstractMwsObject {
      *
      * @param shipDate
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingService withShipDate(XMLGregorianCalendar shipDate) {
@@ -317,7 +312,6 @@ public class ShippingService extends AbstractMwsObject {
      *
      * @param earliestEstimatedDeliveryDate
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingService withEarliestEstimatedDeliveryDate(XMLGregorianCalendar earliestEstimatedDeliveryDate) {
@@ -358,7 +352,6 @@ public class ShippingService extends AbstractMwsObject {
      *
      * @param latestEstimatedDeliveryDate
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingService withLatestEstimatedDeliveryDate(XMLGregorianCalendar latestEstimatedDeliveryDate) {
@@ -399,7 +392,6 @@ public class ShippingService extends AbstractMwsObject {
      *
      * @param rate
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingService withRate(CurrencyAmount rate) {
@@ -440,7 +432,6 @@ public class ShippingService extends AbstractMwsObject {
      *
      * @param shippingServiceOptions
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingService withShippingServiceOptions(ShippingServiceOptions shippingServiceOptions) {
@@ -481,7 +472,6 @@ public class ShippingService extends AbstractMwsObject {
      *
      * @param availableShippingServiceOptions
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingService withAvailableShippingServiceOptions(AvailableShippingServiceOptions availableShippingServiceOptions) {
@@ -530,10 +520,8 @@ public class ShippingService extends AbstractMwsObject {
     /**
      * Add values for AvailableLabelFormats, return this.
      *
-     * @param availableLabelFormats
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link java.lang.String} object.
      */
     public ShippingService withAvailableLabelFormats(String... values) {
         List<String> list = getAvailableLabelFormats();
@@ -584,10 +572,8 @@ public class ShippingService extends AbstractMwsObject {
     /**
      * Add values for AvailableFormatOptionsForLabel, return this.
      *
-     * @param availableFormatOptionsForLabel
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.LabelFormatOption} object.
      */
     public ShippingService withAvailableFormatOptionsForLabel(LabelFormatOption... values) {
         List<LabelFormatOption> list = getAvailableFormatOptionsForLabel();
@@ -630,7 +616,6 @@ public class ShippingService extends AbstractMwsObject {
      *
      * @param requiresAdditionalSellerInputs
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingService withRequiresAdditionalSellerInputs(boolean requiresAdditionalSellerInputs) {
@@ -639,10 +624,9 @@ public class ShippingService extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -662,10 +646,9 @@ public class ShippingService extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -685,17 +668,28 @@ public class ShippingService extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "ShippingService",this);
     }
 
-    /** Legacy Value constructor. */
+    /**
+     * Legacy Value constructor.
+     *
+     * @param shippingServiceName a {@link java.lang.String} object.
+     * @param carrierName a {@link java.lang.String} object.
+     * @param shippingServiceId a {@link java.lang.String} object.
+     * @param shippingServiceOfferId a {@link java.lang.String} object.
+     * @param shipDate a {@link javax.xml.datatype.XMLGregorianCalendar} object.
+     * @param earliestEstimatedDeliveryDate a {@link javax.xml.datatype.XMLGregorianCalendar} object.
+     * @param latestEstimatedDeliveryDate a {@link javax.xml.datatype.XMLGregorianCalendar} object.
+     * @param rate a {@link com.amazonaws.mws.merchantfulfillment.model.CurrencyAmount} object.
+     * @param shippingServiceOptions a {@link com.amazonaws.mws.merchantfulfillment.model.ShippingServiceOptions} object.
+     */
     public ShippingService(String shippingServiceName,String carrierName,String shippingServiceId,String shippingServiceOfferId,XMLGregorianCalendar shipDate,XMLGregorianCalendar earliestEstimatedDeliveryDate,XMLGregorianCalendar latestEstimatedDeliveryDate,CurrencyAmount rate,ShippingServiceOptions shippingServiceOptions) {
         this.shippingServiceName = shippingServiceName;
         this.carrierName = carrierName;
@@ -708,7 +702,19 @@ public class ShippingService extends AbstractMwsObject {
         this.shippingServiceOptions = shippingServiceOptions;
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param shippingServiceName a {@link java.lang.String} object.
+     * @param carrierName a {@link java.lang.String} object.
+     * @param shippingServiceId a {@link java.lang.String} object.
+     * @param shippingServiceOfferId a {@link java.lang.String} object.
+     * @param shipDate a {@link javax.xml.datatype.XMLGregorianCalendar} object.
+     * @param rate a {@link com.amazonaws.mws.merchantfulfillment.model.CurrencyAmount} object.
+     * @param shippingServiceOptions a {@link com.amazonaws.mws.merchantfulfillment.model.ShippingServiceOptions} object.
+     * @param availableFormatOptionsForLabel a {@link java.util.List} object.
+     * @param requiresAdditionalSellerInputs a boolean.
+     */
     public ShippingService(String shippingServiceName,String carrierName,String shippingServiceId,String shippingServiceOfferId,XMLGregorianCalendar shipDate,CurrencyAmount rate,ShippingServiceOptions shippingServiceOptions,List<LabelFormatOption> availableFormatOptionsForLabel,boolean requiresAdditionalSellerInputs) {
         this.shippingServiceName = shippingServiceName;
         this.carrierName = carrierName;
@@ -721,7 +727,9 @@ public class ShippingService extends AbstractMwsObject {
         this.requiresAdditionalSellerInputs = requiresAdditionalSellerInputs;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public ShippingService() {
         super();
     }

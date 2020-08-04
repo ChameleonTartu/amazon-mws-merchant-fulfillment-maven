@@ -83,7 +83,6 @@ public class Label extends AbstractMwsObject {
      *
      * @param customTextForLabel
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Label withCustomTextForLabel(String customTextForLabel) {
@@ -124,7 +123,6 @@ public class Label extends AbstractMwsObject {
      *
      * @param dimensions
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Label withDimensions(LabelDimensions dimensions) {
@@ -165,7 +163,6 @@ public class Label extends AbstractMwsObject {
      *
      * @param fileContents
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Label withFileContents(FileContents fileContents) {
@@ -206,7 +203,6 @@ public class Label extends AbstractMwsObject {
      *
      * @param labelFormat
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Label withLabelFormat(String labelFormat) {
@@ -247,7 +243,6 @@ public class Label extends AbstractMwsObject {
      *
      * @param standardIdForLabel
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Label withStandardIdForLabel(String standardIdForLabel) {
@@ -256,10 +251,9 @@ public class Label extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -271,10 +265,9 @@ public class Label extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -286,23 +279,29 @@ public class Label extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "Label",this);
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param dimensions a {@link com.amazonaws.mws.merchantfulfillment.model.LabelDimensions} object.
+     * @param fileContents a {@link com.amazonaws.mws.merchantfulfillment.model.FileContents} object.
+     */
     public Label(LabelDimensions dimensions,FileContents fileContents) {
         this.dimensions = dimensions;
         this.fileContents = fileContents;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public Label() {
         super();
     }

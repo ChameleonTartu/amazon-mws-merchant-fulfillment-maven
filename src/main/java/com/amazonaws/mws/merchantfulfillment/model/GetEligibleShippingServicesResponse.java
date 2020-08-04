@@ -76,7 +76,6 @@ public class GetEligibleShippingServicesResponse extends AbstractMwsObject imple
      *
      * @param getEligibleShippingServicesResult
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetEligibleShippingServicesResponse withGetEligibleShippingServicesResult(GetEligibleShippingServicesResult getEligibleShippingServicesResult) {
@@ -117,7 +116,6 @@ public class GetEligibleShippingServicesResponse extends AbstractMwsObject imple
      *
      * @param responseMetadata
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetEligibleShippingServicesResponse withResponseMetadata(ResponseMetadata responseMetadata) {
@@ -135,10 +133,9 @@ public class GetEligibleShippingServicesResponse extends AbstractMwsObject imple
     }
 
     /**
-     * Set the value of ResponseHeaderMetadata.
+     * {@inheritDoc}
      *
-     * @param responseHeaderMetadata
-     *            The new value to set.
+     * Set the value of ResponseHeaderMetadata.
      */
     public void setResponseHeaderMetadata(ResponseHeaderMetadata responseHeaderMetadata) {
         this.responseHeaderMetadata = responseHeaderMetadata;
@@ -158,7 +155,6 @@ public class GetEligibleShippingServicesResponse extends AbstractMwsObject imple
      *
      * @param responseHeaderMetadata
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetEligibleShippingServicesResponse withResponseHeaderMetadata(ResponseHeaderMetadata responseHeaderMetadata) {
@@ -167,10 +163,9 @@ public class GetEligibleShippingServicesResponse extends AbstractMwsObject imple
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -179,10 +174,9 @@ public class GetEligibleShippingServicesResponse extends AbstractMwsObject imple
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -191,10 +185,9 @@ public class GetEligibleShippingServicesResponse extends AbstractMwsObject imple
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
@@ -202,13 +195,20 @@ public class GetEligibleShippingServicesResponse extends AbstractMwsObject imple
     }
 
 
-    /** Legacy Value constructor. */
+    /**
+     * Legacy Value constructor.
+     *
+     * @param getEligibleShippingServicesResult a {@link com.amazonaws.mws.merchantfulfillment.model.GetEligibleShippingServicesResult} object.
+     * @param responseMetadata a {@link com.amazonaws.mws.merchantfulfillment.model.ResponseMetadata} object.
+     */
     public GetEligibleShippingServicesResponse(GetEligibleShippingServicesResult getEligibleShippingServicesResult,ResponseMetadata responseMetadata) {
         this.getEligibleShippingServicesResult = getEligibleShippingServicesResult;
         this.responseMetadata = responseMetadata;
     }
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public GetEligibleShippingServicesResponse() {
         super();
     }

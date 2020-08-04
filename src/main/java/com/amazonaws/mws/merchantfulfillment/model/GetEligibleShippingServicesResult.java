@@ -39,6 +39,7 @@ import com.amazonservices.mws.client.*;
  *    &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ *
  */
 public class GetEligibleShippingServicesResult extends AbstractMwsObject {
 
@@ -91,10 +92,8 @@ public class GetEligibleShippingServicesResult extends AbstractMwsObject {
     /**
      * Add values for ShippingServiceList, return this.
      *
-     * @param shippingServiceList
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.ShippingService} object.
      */
     public GetEligibleShippingServicesResult withShippingServiceList(ShippingService... values) {
         List<ShippingService> list = getShippingServiceList();
@@ -145,10 +144,8 @@ public class GetEligibleShippingServicesResult extends AbstractMwsObject {
     /**
      * Add values for RejectedShippingServiceList, return this.
      *
-     * @param rejectedShippingServiceList
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.RejectedShippingService} object.
      */
     public GetEligibleShippingServicesResult withRejectedShippingServiceList(RejectedShippingService... values) {
         List<RejectedShippingService> list = getRejectedShippingServiceList();
@@ -199,10 +196,8 @@ public class GetEligibleShippingServicesResult extends AbstractMwsObject {
     /**
      * Add values for TemporarilyUnavailableCarrierList, return this.
      *
-     * @param temporarilyUnavailableCarrierList
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.TemporarilyUnavailableCarrier} object.
      */
     public GetEligibleShippingServicesResult withTemporarilyUnavailableCarrierList(TemporarilyUnavailableCarrier... values) {
         List<TemporarilyUnavailableCarrier> list = getTemporarilyUnavailableCarrierList();
@@ -253,10 +248,8 @@ public class GetEligibleShippingServicesResult extends AbstractMwsObject {
     /**
      * Add values for TermsAndConditionsNotAcceptedCarrierList, return this.
      *
-     * @param termsAndConditionsNotAcceptedCarrierList
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.TermsAndConditionsNotAcceptedCarrier} object.
      */
     public GetEligibleShippingServicesResult withTermsAndConditionsNotAcceptedCarrierList(TermsAndConditionsNotAcceptedCarrier... values) {
         List<TermsAndConditionsNotAcceptedCarrier> list = getTermsAndConditionsNotAcceptedCarrierList();
@@ -267,10 +260,9 @@ public class GetEligibleShippingServicesResult extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -281,10 +273,9 @@ public class GetEligibleShippingServicesResult extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -295,29 +286,40 @@ public class GetEligibleShippingServicesResult extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "GetEligibleShippingServicesResult",this);
     }
 
-    /** Legacy Value constructor. */
+    /**
+     * Legacy Value constructor.
+     *
+     * @param shippingServiceList a {@link java.util.List} object.
+     * @param temporarilyUnavailableCarrierList a {@link java.util.List} object.
+     * @param termsAndConditionsNotAcceptedCarrierList a {@link java.util.List} object.
+     */
     public GetEligibleShippingServicesResult(List<ShippingService> shippingServiceList,List<TemporarilyUnavailableCarrier> temporarilyUnavailableCarrierList,List<TermsAndConditionsNotAcceptedCarrier> termsAndConditionsNotAcceptedCarrierList) {
         this.shippingServiceList = shippingServiceList;
         this.temporarilyUnavailableCarrierList = temporarilyUnavailableCarrierList;
         this.termsAndConditionsNotAcceptedCarrierList = termsAndConditionsNotAcceptedCarrierList;
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param shippingServiceList a {@link java.util.List} object.
+     */
     public GetEligibleShippingServicesResult(List<ShippingService> shippingServiceList) {
         this.shippingServiceList = shippingServiceList;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public GetEligibleShippingServicesResult() {
         super();
     }

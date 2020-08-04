@@ -77,7 +77,6 @@ public class GetShipmentRequest extends AbstractMwsObject {
      *
      * @param sellerId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetShipmentRequest withSellerId(String sellerId) {
@@ -118,7 +117,6 @@ public class GetShipmentRequest extends AbstractMwsObject {
      *
      * @param mwsAuthToken
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetShipmentRequest withMWSAuthToken(String mwsAuthToken) {
@@ -159,7 +157,6 @@ public class GetShipmentRequest extends AbstractMwsObject {
      *
      * @param shipmentId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetShipmentRequest withShipmentId(String shipmentId) {
@@ -168,10 +165,9 @@ public class GetShipmentRequest extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -181,10 +177,9 @@ public class GetShipmentRequest extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -194,30 +189,42 @@ public class GetShipmentRequest extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "GetShipmentRequest",this);
     }
 
-    /** Legacy Value constructor - DEPRECATED: mwsAuthToken is not part of this request object. This is kept for legacy support purposes.*/
+    /**
+     * Legacy Value constructor - DEPRECATED: mwsAuthToken is not part of this request object. This is kept for legacy support purposes.
+     *
+     * @param sellerId a {@link java.lang.String} object.
+     * @param mwsAuthToken a {@link java.lang.String} object.
+     * @param shipmentId a {@link java.lang.String} object.
+     */
     public GetShipmentRequest(String sellerId,String mwsAuthToken,String shipmentId) {
         this.sellerId = sellerId;
         this.mwsAuthToken = mwsAuthToken;
         this.shipmentId = shipmentId;
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param sellerId a {@link java.lang.String} object.
+     * @param shipmentId a {@link java.lang.String} object.
+     */
     public GetShipmentRequest(String sellerId,String shipmentId) {
         this.sellerId = sellerId;
         this.shipmentId = shipmentId;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public GetShipmentRequest() {
         super();
     }

@@ -32,8 +32,7 @@ public interface MWSMerchantFulfillmentServiceAsync extends MWSMerchantFulfillme
      *
      * @param request
      *           CancelShipmentRequest request.
-     *
-     * @return Future<CancelShipmentResponse> response.
+     * @return {@code Future<CancelShipmentResponse>} response.
      */
     Future<CancelShipmentResponse> cancelShipmentAsync(
         CancelShipmentRequest request);
@@ -46,8 +45,7 @@ public interface MWSMerchantFulfillmentServiceAsync extends MWSMerchantFulfillme
      *
      * @param request
      *           CreateShipmentRequest request.
-     *
-     * @return Future<CreateShipmentResponse> response.
+     * @return {@code Future<CreateShipmentResponse>} response.
      */
     Future<CreateShipmentResponse> createShipmentAsync(
         CreateShipmentRequest request);
@@ -60,8 +58,7 @@ public interface MWSMerchantFulfillmentServiceAsync extends MWSMerchantFulfillme
      *
      * @param request
      *           GetAdditionalSellerInputsRequest request.
-     *
-     * @return Future<GetAdditionalSellerInputsResponse> response.
+     * @return {@code Future<GetAdditionalSellerInputsResponse>} response.
      */
     Future<GetAdditionalSellerInputsResponse> getAdditionalSellerInputsAsync(
         GetAdditionalSellerInputsRequest request);
@@ -75,8 +72,7 @@ public interface MWSMerchantFulfillmentServiceAsync extends MWSMerchantFulfillme
      *
      * @param request
      *           GetEligibleShippingServicesRequest request.
-     *
-     * @return Future<GetEligibleShippingServicesResponse> response.
+     * @return {@code Future<GetEligibleShippingServicesResponse>} response.
      */
     Future<GetEligibleShippingServicesResponse> getEligibleShippingServicesAsync(
         GetEligibleShippingServicesRequest request);
@@ -88,8 +84,7 @@ public interface MWSMerchantFulfillmentServiceAsync extends MWSMerchantFulfillme
      *
      * @param request
      *           GetShipmentRequest request.
-     *
-     * @return Future<GetShipmentResponse> response.
+     * @return {@code Future<GetShipmentResponse>} response.
      */
     Future<GetShipmentResponse> getShipmentAsync(
         GetShipmentRequest request);
@@ -97,12 +92,9 @@ public interface MWSMerchantFulfillmentServiceAsync extends MWSMerchantFulfillme
     /**
      * Get Service Status
      *
-     * 
-     *
      * @param request
      *           GetServiceStatusRequest request.
-     *
-     * @return Future<GetServiceStatusResponse> response.
+     * @return {@code Future<GetServiceStatusResponse>} response.
      */
     Future<GetServiceStatusResponse> getServiceStatusAsync(
         GetServiceStatusRequest request);

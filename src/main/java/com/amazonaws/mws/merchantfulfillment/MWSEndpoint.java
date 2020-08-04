@@ -15,6 +15,9 @@ package com.amazonaws.mws.merchantfulfillment;
 
 import com.amazonservices.mws.client.MwsEndpoints;
 
+/**
+ * <p>MWSEndpoint class.</p>
+ */
 public class MWSEndpoint extends MwsEndpoints {
 
     /** Never instantiated. */

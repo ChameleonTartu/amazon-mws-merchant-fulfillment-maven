@@ -83,7 +83,6 @@ public class GetAdditionalSellerInputsRequest extends AbstractMwsObject {
      *
      * @param orderId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetAdditionalSellerInputsRequest withOrderId(String orderId) {
@@ -124,7 +123,6 @@ public class GetAdditionalSellerInputsRequest extends AbstractMwsObject {
      *
      * @param mwsAuthToken
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetAdditionalSellerInputsRequest withMWSAuthToken(String mwsAuthToken) {
@@ -165,7 +163,6 @@ public class GetAdditionalSellerInputsRequest extends AbstractMwsObject {
      *
      * @param sellerId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetAdditionalSellerInputsRequest withSellerId(String sellerId) {
@@ -206,7 +203,6 @@ public class GetAdditionalSellerInputsRequest extends AbstractMwsObject {
      *
      * @param shippingServiceId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetAdditionalSellerInputsRequest withShippingServiceId(String shippingServiceId) {
@@ -247,7 +243,6 @@ public class GetAdditionalSellerInputsRequest extends AbstractMwsObject {
      *
      * @param shipFromAddress
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetAdditionalSellerInputsRequest withShipFromAddress(Address shipFromAddress) {
@@ -256,10 +251,9 @@ public class GetAdditionalSellerInputsRequest extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -271,10 +265,9 @@ public class GetAdditionalSellerInputsRequest extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -286,17 +279,23 @@ public class GetAdditionalSellerInputsRequest extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "GetAdditionalSellerInputsRequest",this);
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param orderId a {@link java.lang.String} object.
+     * @param sellerId a {@link java.lang.String} object.
+     * @param shippingServiceId a {@link java.lang.String} object.
+     * @param shipFromAddress a {@link com.amazonaws.mws.merchantfulfillment.model.Address} object.
+     */
     public GetAdditionalSellerInputsRequest(String orderId,String sellerId,String shippingServiceId,Address shipFromAddress) {
         this.orderId = orderId;
         this.sellerId = sellerId;
@@ -304,7 +303,9 @@ public class GetAdditionalSellerInputsRequest extends AbstractMwsObject {
         this.shipFromAddress = shipFromAddress;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public GetAdditionalSellerInputsRequest() {
         super();
     }

@@ -83,7 +83,6 @@ public class ShippingServiceOptions extends AbstractMwsObject {
      *
      * @param deliveryExperience
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingServiceOptions withDeliveryExperience(String deliveryExperience) {
@@ -124,7 +123,6 @@ public class ShippingServiceOptions extends AbstractMwsObject {
      *
      * @param declaredValue
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingServiceOptions withDeclaredValue(CurrencyAmount declaredValue) {
@@ -174,7 +172,6 @@ public class ShippingServiceOptions extends AbstractMwsObject {
      *
      * @param carrierWillPickUp
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingServiceOptions withCarrierWillPickUp(Boolean carrierWillPickUp) {
@@ -215,7 +212,6 @@ public class ShippingServiceOptions extends AbstractMwsObject {
      *
      * @param carrierWillPickUpOption
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingServiceOptions withCarrierWillPickUpOption(String carrierWillPickUpOption) {
@@ -256,7 +252,6 @@ public class ShippingServiceOptions extends AbstractMwsObject {
      *
      * @param labelFormat
      *             The new value to set.
-     *
      * @return This instance.
      */
     public ShippingServiceOptions withLabelFormat(String labelFormat) {
@@ -265,10 +260,9 @@ public class ShippingServiceOptions extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -280,10 +274,9 @@ public class ShippingServiceOptions extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -295,10 +288,9 @@ public class ShippingServiceOptions extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
@@ -306,14 +298,22 @@ public class ShippingServiceOptions extends AbstractMwsObject {
     }
 
 
-    /** Legacy Value constructor. */
+    /**
+     * Legacy Value constructor.
+     *
+     * @param deliveryExperience a {@link java.lang.String} object.
+     * @param declaredValue a {@link com.amazonaws.mws.merchantfulfillment.model.CurrencyAmount} object.
+     * @param carrierWillPickUp a boolean.
+     */
     public ShippingServiceOptions(String deliveryExperience,CurrencyAmount declaredValue,boolean carrierWillPickUp) {
         this.deliveryExperience = deliveryExperience;
         this.declaredValue = declaredValue;
         this.carrierWillPickUp = carrierWillPickUp;
     }
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public ShippingServiceOptions() {
         super();
     }

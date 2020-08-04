@@ -74,7 +74,6 @@ public class AvailableDeliveryExperienceOption extends AbstractMwsObject {
      *
      * @param deliveryExperienceOption
      *             The new value to set.
-     *
      * @return This instance.
      */
     public AvailableDeliveryExperienceOption withDeliveryExperienceOption(String deliveryExperienceOption) {
@@ -115,7 +114,6 @@ public class AvailableDeliveryExperienceOption extends AbstractMwsObject {
      *
      * @param charge
      *             The new value to set.
-     *
      * @return This instance.
      */
     public AvailableDeliveryExperienceOption withCharge(CurrencyAmount charge) {
@@ -124,10 +122,9 @@ public class AvailableDeliveryExperienceOption extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -136,10 +133,9 @@ public class AvailableDeliveryExperienceOption extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -148,23 +144,29 @@ public class AvailableDeliveryExperienceOption extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "AvailableDeliveryExperienceOption",this);
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param deliveryExperienceOption a {@link java.lang.String} object.
+     * @param charge a {@link com.amazonaws.mws.merchantfulfillment.model.CurrencyAmount} object.
+     */
     public AvailableDeliveryExperienceOption(String deliveryExperienceOption,CurrencyAmount charge) {
         this.deliveryExperienceOption = deliveryExperienceOption;
         this.charge = charge;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public AvailableDeliveryExperienceOption() {
         super();
     }

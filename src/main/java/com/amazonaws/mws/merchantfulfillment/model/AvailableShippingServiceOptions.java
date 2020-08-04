@@ -85,10 +85,8 @@ public class AvailableShippingServiceOptions extends AbstractMwsObject {
     /**
      * Add values for AvailableCarrierWillPickUpOptions, return this.
      *
-     * @param availableCarrierWillPickUpOptions
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.AvailableCarrierWillPickUpOption} object.
      */
     public AvailableShippingServiceOptions withAvailableCarrierWillPickUpOptions(AvailableCarrierWillPickUpOption... values) {
         List<AvailableCarrierWillPickUpOption> list = getAvailableCarrierWillPickUpOptions();
@@ -139,10 +137,8 @@ public class AvailableShippingServiceOptions extends AbstractMwsObject {
     /**
      * Add values for AvailableDeliveryExperienceOptions, return this.
      *
-     * @param availableDeliveryExperienceOptions
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.AvailableDeliveryExperienceOption} object.
      */
     public AvailableShippingServiceOptions withAvailableDeliveryExperienceOptions(AvailableDeliveryExperienceOption... values) {
         List<AvailableDeliveryExperienceOption> list = getAvailableDeliveryExperienceOptions();
@@ -153,10 +149,9 @@ public class AvailableShippingServiceOptions extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -165,10 +160,9 @@ public class AvailableShippingServiceOptions extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -177,23 +171,29 @@ public class AvailableShippingServiceOptions extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "AvailableShippingServiceOptions",this);
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param availableCarrierWillPickUpOptions a {@link java.util.List} object.
+     * @param availableDeliveryExperienceOptions a {@link java.util.List} object.
+     */
     public AvailableShippingServiceOptions(List<AvailableCarrierWillPickUpOption> availableCarrierWillPickUpOptions,List<AvailableDeliveryExperienceOption> availableDeliveryExperienceOptions) {
         this.availableCarrierWillPickUpOptions = availableCarrierWillPickUpOptions;
         this.availableDeliveryExperienceOptions = availableDeliveryExperienceOptions;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public AvailableShippingServiceOptions() {
         super();
     }

@@ -76,7 +76,6 @@ public class GetAdditionalSellerInputsResponse extends AbstractMwsObject impleme
      *
      * @param getAdditionalSellerInputsResult
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetAdditionalSellerInputsResponse withGetAdditionalSellerInputsResult(GetAdditionalSellerInputsResult getAdditionalSellerInputsResult) {
@@ -117,7 +116,6 @@ public class GetAdditionalSellerInputsResponse extends AbstractMwsObject impleme
      *
      * @param responseMetadata
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetAdditionalSellerInputsResponse withResponseMetadata(ResponseMetadata responseMetadata) {
@@ -135,10 +133,9 @@ public class GetAdditionalSellerInputsResponse extends AbstractMwsObject impleme
     }
 
     /**
-     * Set the value of ResponseHeaderMetadata.
+     * {@inheritDoc}
      *
-     * @param responseHeaderMetadata
-     *            The new value to set.
+     * Set the value of ResponseHeaderMetadata.
      */
     public void setResponseHeaderMetadata(ResponseHeaderMetadata responseHeaderMetadata) {
         this.responseHeaderMetadata = responseHeaderMetadata;
@@ -158,7 +155,6 @@ public class GetAdditionalSellerInputsResponse extends AbstractMwsObject impleme
      *
      * @param responseHeaderMetadata
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetAdditionalSellerInputsResponse withResponseHeaderMetadata(ResponseHeaderMetadata responseHeaderMetadata) {
@@ -167,10 +163,9 @@ public class GetAdditionalSellerInputsResponse extends AbstractMwsObject impleme
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -179,10 +174,9 @@ public class GetAdditionalSellerInputsResponse extends AbstractMwsObject impleme
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -191,10 +185,9 @@ public class GetAdditionalSellerInputsResponse extends AbstractMwsObject impleme
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
@@ -202,7 +195,9 @@ public class GetAdditionalSellerInputsResponse extends AbstractMwsObject impleme
     }
 
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public GetAdditionalSellerInputsResponse() {
         super();
     }

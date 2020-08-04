@@ -101,7 +101,6 @@ public class Address extends AbstractMwsObject {
      *
      * @param name
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Address withName(String name) {
@@ -142,7 +141,6 @@ public class Address extends AbstractMwsObject {
      *
      * @param addressLine1
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Address withAddressLine1(String addressLine1) {
@@ -183,7 +181,6 @@ public class Address extends AbstractMwsObject {
      *
      * @param addressLine2
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Address withAddressLine2(String addressLine2) {
@@ -224,7 +221,6 @@ public class Address extends AbstractMwsObject {
      *
      * @param addressLine3
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Address withAddressLine3(String addressLine3) {
@@ -265,7 +261,6 @@ public class Address extends AbstractMwsObject {
      *
      * @param districtOrCounty
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Address withDistrictOrCounty(String districtOrCounty) {
@@ -306,7 +301,6 @@ public class Address extends AbstractMwsObject {
      *
      * @param email
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Address withEmail(String email) {
@@ -347,7 +341,6 @@ public class Address extends AbstractMwsObject {
      *
      * @param city
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Address withCity(String city) {
@@ -388,7 +381,6 @@ public class Address extends AbstractMwsObject {
      *
      * @param stateOrProvinceCode
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Address withStateOrProvinceCode(String stateOrProvinceCode) {
@@ -429,7 +421,6 @@ public class Address extends AbstractMwsObject {
      *
      * @param postalCode
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Address withPostalCode(String postalCode) {
@@ -470,7 +461,6 @@ public class Address extends AbstractMwsObject {
      *
      * @param countryCode
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Address withCountryCode(String countryCode) {
@@ -511,7 +501,6 @@ public class Address extends AbstractMwsObject {
      *
      * @param phone
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Address withPhone(String phone) {
@@ -520,10 +509,9 @@ public class Address extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -541,10 +529,9 @@ public class Address extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -562,17 +549,30 @@ public class Address extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "Address",this);
     }
 
-    /** Legacy Value constructor. */
+    /**
+     * Legacy Value constructor.
+     *
+     * @param name a {@link java.lang.String} object.
+     * @param addressLine1 a {@link java.lang.String} object.
+     * @param addressLine2 a {@link java.lang.String} object.
+     * @param addressLine3 a {@link java.lang.String} object.
+     * @param districtOrCounty a {@link java.lang.String} object.
+     * @param email a {@link java.lang.String} object.
+     * @param city a {@link java.lang.String} object.
+     * @param stateOrProvinceCode a {@link java.lang.String} object.
+     * @param postalCode a {@link java.lang.String} object.
+     * @param countryCode a {@link java.lang.String} object.
+     * @param phone a {@link java.lang.String} object.
+     */
     public Address(String name,String addressLine1,String addressLine2,String addressLine3,String districtOrCounty,String email,String city,String stateOrProvinceCode,String postalCode,String countryCode,String phone) {
         this.name = name;
         this.addressLine1 = addressLine1;
@@ -587,7 +587,17 @@ public class Address extends AbstractMwsObject {
         this.phone = phone;
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param name a {@link java.lang.String} object.
+     * @param addressLine1 a {@link java.lang.String} object.
+     * @param email a {@link java.lang.String} object.
+     * @param city a {@link java.lang.String} object.
+     * @param postalCode a {@link java.lang.String} object.
+     * @param countryCode a {@link java.lang.String} object.
+     * @param phone a {@link java.lang.String} object.
+     */
     public Address(String name,String addressLine1,String email,String city,String postalCode,String countryCode,String phone) {
         this.name = name;
         this.addressLine1 = addressLine1;
@@ -598,7 +608,9 @@ public class Address extends AbstractMwsObject {
         this.phone = phone;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public Address() {
         super();
     }

@@ -76,7 +76,6 @@ public class CurrencyAmount extends AbstractMwsObject {
      *
      * @param currencyCode
      *             The new value to set.
-     *
      * @return This instance.
      */
     public CurrencyAmount withCurrencyCode(String currencyCode) {
@@ -117,7 +116,6 @@ public class CurrencyAmount extends AbstractMwsObject {
      *
      * @param amount
      *             The new value to set.
-     *
      * @return This instance.
      */
     public CurrencyAmount withAmount(BigDecimal amount) {
@@ -126,10 +124,9 @@ public class CurrencyAmount extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -138,10 +135,9 @@ public class CurrencyAmount extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -150,23 +146,29 @@ public class CurrencyAmount extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "CurrencyAmount",this);
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param currencyCode a {@link java.lang.String} object.
+     * @param amount a {@link java.math.BigDecimal} object.
+     */
     public CurrencyAmount(String currencyCode,BigDecimal amount) {
         this.currencyCode = currencyCode;
         this.amount = amount;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public CurrencyAmount() {
         super();
     }

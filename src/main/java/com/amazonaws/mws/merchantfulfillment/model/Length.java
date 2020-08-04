@@ -76,7 +76,6 @@ public class Length extends AbstractMwsObject {
      *
      * @param value
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Length withValue(BigDecimal value) {
@@ -117,7 +116,6 @@ public class Length extends AbstractMwsObject {
      *
      * @param unit
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Length withUnit(String unit) {
@@ -126,10 +124,9 @@ public class Length extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -138,10 +135,9 @@ public class Length extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -150,10 +146,9 @@ public class Length extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
@@ -161,7 +156,9 @@ public class Length extends AbstractMwsObject {
     }
 
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public Length() {
         super();
     }

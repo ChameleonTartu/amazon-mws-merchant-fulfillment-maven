@@ -20,8 +20,21 @@ import com.amazonaws.mws.merchantfulfillment.model.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
+/**
+ * <p>MWSMerchantFulfillmentServiceAsyncClient class.</p>
+ */
 public class MWSMerchantFulfillmentServiceAsyncClient extends MWSMerchantFulfillmentServiceClient implements MWSMerchantFulfillmentServiceAsync {
 
+    /**
+     * <p>Constructor for MWSMerchantFulfillmentServiceAsyncClient.</p>
+     *
+     * @param accessKey a {@link java.lang.String} object.
+     * @param secretKey a {@link java.lang.String} object.
+     * @param applicationName a {@link java.lang.String} object.
+     * @param applicationVersion a {@link java.lang.String} object.
+     * @param config a {@link com.amazonaws.mws.merchantfulfillment.MWSMerchantFulfillmentServiceConfig} object.
+     * @param executor a {@link java.util.concurrent.ExecutorService} object.
+     */
     public MWSMerchantFulfillmentServiceAsyncClient(
             String accessKey,
             String secretKey,
@@ -33,6 +46,15 @@ public class MWSMerchantFulfillmentServiceAsyncClient extends MWSMerchantFulfill
         connection.setExecutorService(executor);
     }
 
+    /**
+     * <p>Constructor for MWSMerchantFulfillmentServiceAsyncClient.</p>
+     *
+     * @param accessKey a {@link java.lang.String} object.
+     * @param secretKey a {@link java.lang.String} object.
+     * @param applicationName a {@link java.lang.String} object.
+     * @param applicationVersion a {@link java.lang.String} object.
+     * @param config a {@link com.amazonaws.mws.merchantfulfillment.MWSMerchantFulfillmentServiceConfig} object.
+     */
     public MWSMerchantFulfillmentServiceAsyncClient(
             String accessKey,
             String secretKey,
@@ -42,6 +64,13 @@ public class MWSMerchantFulfillmentServiceAsyncClient extends MWSMerchantFulfill
         super(accessKey, secretKey, applicationName, applicationVersion, config);
     }
 
+    /**
+     * <p>Constructor for MWSMerchantFulfillmentServiceAsyncClient.</p>
+     *
+     * @param accessKey a {@link java.lang.String} object.
+     * @param secretKey a {@link java.lang.String} object.
+     * @param config a {@link com.amazonaws.mws.merchantfulfillment.MWSMerchantFulfillmentServiceConfig} object.
+     */
     public MWSMerchantFulfillmentServiceAsyncClient(
             String accessKey,
             String secretKey,
@@ -49,6 +78,14 @@ public class MWSMerchantFulfillmentServiceAsyncClient extends MWSMerchantFulfill
         super(accessKey, secretKey, config);
     }
 
+    /**
+     * <p>Constructor for MWSMerchantFulfillmentServiceAsyncClient.</p>
+     *
+     * @param accessKey a {@link java.lang.String} object.
+     * @param secretKey a {@link java.lang.String} object.
+     * @param applicationName a {@link java.lang.String} object.
+     * @param applicationVersion a {@link java.lang.String} object.
+     */
     public MWSMerchantFulfillmentServiceAsyncClient(
             String accessKey,
             String secretKey,
@@ -57,6 +94,7 @@ public class MWSMerchantFulfillmentServiceAsyncClient extends MWSMerchantFulfill
         super(accessKey, secretKey, applicationName, applicationVersion);
     }
 
+    /** {@inheritDoc} */
     public Future<CancelShipmentResponse> cancelShipmentAsync(
         CancelShipmentRequest request) {
         return connection.callAsync(
@@ -64,6 +102,7 @@ public class MWSMerchantFulfillmentServiceAsyncClient extends MWSMerchantFulfill
             request);
     }
 
+    /** {@inheritDoc} */
     public Future<CreateShipmentResponse> createShipmentAsync(
         CreateShipmentRequest request) {
         return connection.callAsync(
@@ -71,6 +110,7 @@ public class MWSMerchantFulfillmentServiceAsyncClient extends MWSMerchantFulfill
             request);
     }
 
+    /** {@inheritDoc} */
     public Future<GetAdditionalSellerInputsResponse> getAdditionalSellerInputsAsync(
         GetAdditionalSellerInputsRequest request) {
         return connection.callAsync(
@@ -78,6 +118,7 @@ public class MWSMerchantFulfillmentServiceAsyncClient extends MWSMerchantFulfill
             request);
     }
 
+    /** {@inheritDoc} */
     public Future<GetEligibleShippingServicesResponse> getEligibleShippingServicesAsync(
         GetEligibleShippingServicesRequest request) {
         return connection.callAsync(
@@ -85,6 +126,7 @@ public class MWSMerchantFulfillmentServiceAsyncClient extends MWSMerchantFulfill
             request);
     }
 
+    /** {@inheritDoc} */
     public Future<GetShipmentResponse> getShipmentAsync(
         GetShipmentRequest request) {
         return connection.callAsync(
@@ -92,6 +134,7 @@ public class MWSMerchantFulfillmentServiceAsyncClient extends MWSMerchantFulfill
             request);
     }
 
+    /** {@inheritDoc} */
     public Future<GetServiceStatusResponse> getServiceStatusAsync(
         GetServiceStatusRequest request) {
         return connection.callAsync(

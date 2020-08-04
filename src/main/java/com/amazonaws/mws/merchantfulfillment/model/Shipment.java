@@ -118,7 +118,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param shipmentId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withShipmentId(String shipmentId) {
@@ -159,7 +158,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param amazonOrderId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withAmazonOrderId(String amazonOrderId) {
@@ -200,7 +198,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param sellerOrderId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withSellerOrderId(String sellerOrderId) {
@@ -249,10 +246,8 @@ public class Shipment extends AbstractMwsObject {
     /**
      * Add values for ItemList, return this.
      *
-     * @param itemList
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.Item} object.
      */
     public Shipment withItemList(Item... values) {
         List<Item> list = getItemList();
@@ -295,7 +290,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param shipFromAddress
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withShipFromAddress(Address shipFromAddress) {
@@ -336,7 +330,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param shipToAddress
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withShipToAddress(Address shipToAddress) {
@@ -377,7 +370,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param packageDimensions
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withPackageDimensions(PackageDimensions packageDimensions) {
@@ -418,7 +410,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param weight
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withWeight(Weight weight) {
@@ -459,7 +450,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param insurance
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withInsurance(CurrencyAmount insurance) {
@@ -500,7 +490,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param shippingService
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withShippingService(ShippingService shippingService) {
@@ -541,7 +530,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param label
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withLabel(Label label) {
@@ -582,7 +570,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param status
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withStatus(String status) {
@@ -623,7 +610,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param trackingId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withTrackingId(String trackingId) {
@@ -664,7 +650,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param createdDate
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withCreatedDate(XMLGregorianCalendar createdDate) {
@@ -705,7 +690,6 @@ public class Shipment extends AbstractMwsObject {
      *
      * @param lastUpdatedDate
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Shipment withLastUpdatedDate(XMLGregorianCalendar lastUpdatedDate) {
@@ -714,10 +698,9 @@ public class Shipment extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -739,10 +722,9 @@ public class Shipment extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -764,17 +746,34 @@ public class Shipment extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "Shipment",this);
     }
 
-    /** Legacy Value constructor. */
+    /**
+     * Legacy Value constructor.
+     *
+     * @param shipmentId a {@link java.lang.String} object.
+     * @param amazonOrderId a {@link java.lang.String} object.
+     * @param sellerOrderId a {@link java.lang.String} object.
+     * @param itemList a {@link java.util.List} object.
+     * @param shipFromAddress a {@link com.amazonaws.mws.merchantfulfillment.model.Address} object.
+     * @param shipToAddress a {@link com.amazonaws.mws.merchantfulfillment.model.Address} object.
+     * @param packageDimensions a {@link com.amazonaws.mws.merchantfulfillment.model.PackageDimensions} object.
+     * @param weight a {@link com.amazonaws.mws.merchantfulfillment.model.Weight} object.
+     * @param insurance a {@link com.amazonaws.mws.merchantfulfillment.model.CurrencyAmount} object.
+     * @param shippingService a {@link com.amazonaws.mws.merchantfulfillment.model.ShippingService} object.
+     * @param label a {@link com.amazonaws.mws.merchantfulfillment.model.Label} object.
+     * @param status a {@link java.lang.String} object.
+     * @param trackingId a {@link java.lang.String} object.
+     * @param createdDate a {@link javax.xml.datatype.XMLGregorianCalendar} object.
+     * @param lastUpdatedDate a {@link javax.xml.datatype.XMLGregorianCalendar} object.
+     */
     public Shipment(String shipmentId,String amazonOrderId,String sellerOrderId,List<Item> itemList,Address shipFromAddress,Address shipToAddress,PackageDimensions packageDimensions,Weight weight,CurrencyAmount insurance,ShippingService shippingService,Label label,String status,String trackingId,XMLGregorianCalendar createdDate,XMLGregorianCalendar lastUpdatedDate) {
         this.shipmentId = shipmentId;
         this.amazonOrderId = amazonOrderId;
@@ -793,7 +792,18 @@ public class Shipment extends AbstractMwsObject {
         this.lastUpdatedDate = lastUpdatedDate;
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param shipmentId a {@link java.lang.String} object.
+     * @param shipFromAddress a {@link com.amazonaws.mws.merchantfulfillment.model.Address} object.
+     * @param shipToAddress a {@link com.amazonaws.mws.merchantfulfillment.model.Address} object.
+     * @param packageDimensions a {@link com.amazonaws.mws.merchantfulfillment.model.PackageDimensions} object.
+     * @param weight a {@link com.amazonaws.mws.merchantfulfillment.model.Weight} object.
+     * @param shippingService a {@link com.amazonaws.mws.merchantfulfillment.model.ShippingService} object.
+     * @param status a {@link java.lang.String} object.
+     * @param createdDate a {@link javax.xml.datatype.XMLGregorianCalendar} object.
+     */
     public Shipment(String shipmentId,Address shipFromAddress,Address shipToAddress,PackageDimensions packageDimensions,Weight weight,ShippingService shippingService,String status,XMLGregorianCalendar createdDate) {
         this.shipmentId = shipmentId;
         this.shipFromAddress = shipFromAddress;
@@ -805,7 +815,9 @@ public class Shipment extends AbstractMwsObject {
         this.createdDate = createdDate;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public Shipment() {
         super();
     }

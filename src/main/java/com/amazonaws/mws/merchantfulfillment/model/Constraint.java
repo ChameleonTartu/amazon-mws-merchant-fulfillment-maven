@@ -74,7 +74,6 @@ public class Constraint extends AbstractMwsObject {
      *
      * @param validationRegEx
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Constraint withValidationRegEx(String validationRegEx) {
@@ -115,7 +114,6 @@ public class Constraint extends AbstractMwsObject {
      *
      * @param validationString
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Constraint withValidationString(String validationString) {
@@ -124,10 +122,9 @@ public class Constraint extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -136,10 +133,9 @@ public class Constraint extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -148,22 +144,27 @@ public class Constraint extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "Constraint",this);
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param validationString a {@link java.lang.String} object.
+     */
     public Constraint(String validationString) {
         this.validationString = validationString;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public Constraint() {
         super();
     }

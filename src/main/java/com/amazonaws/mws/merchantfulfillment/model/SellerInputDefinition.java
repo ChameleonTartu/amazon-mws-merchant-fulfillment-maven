@@ -42,6 +42,7 @@ import com.amazonservices.mws.client.*;
  *    &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ *
  */
 public class SellerInputDefinition extends AbstractMwsObject {
 
@@ -92,7 +93,6 @@ public class SellerInputDefinition extends AbstractMwsObject {
      *
      * @param isRequired
      *             The new value to set.
-     *
      * @return This instance.
      */
     public SellerInputDefinition withIsRequired(boolean isRequired) {
@@ -133,7 +133,6 @@ public class SellerInputDefinition extends AbstractMwsObject {
      *
      * @param dataType
      *             The new value to set.
-     *
      * @return This instance.
      */
     public SellerInputDefinition withDataType(String dataType) {
@@ -182,10 +181,8 @@ public class SellerInputDefinition extends AbstractMwsObject {
     /**
      * Add values for Constraints, return this.
      *
-     * @param constraints
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.Constraint} object.
      */
     public SellerInputDefinition withConstraints(Constraint... values) {
         List<Constraint> list = getConstraints();
@@ -228,7 +225,6 @@ public class SellerInputDefinition extends AbstractMwsObject {
      *
      * @param inputDisplayText
      *             The new value to set.
-     *
      * @return This instance.
      */
     public SellerInputDefinition withInputDisplayText(String inputDisplayText) {
@@ -269,7 +265,6 @@ public class SellerInputDefinition extends AbstractMwsObject {
      *
      * @param inputTarget
      *             The new value to set.
-     *
      * @return This instance.
      */
     public SellerInputDefinition withInputTarget(String inputTarget) {
@@ -310,7 +305,6 @@ public class SellerInputDefinition extends AbstractMwsObject {
      *
      * @param storedValue
      *             The new value to set.
-     *
      * @return This instance.
      */
     public SellerInputDefinition withStoredValue(AdditionalSellerInput storedValue) {
@@ -359,10 +353,8 @@ public class SellerInputDefinition extends AbstractMwsObject {
     /**
      * Add values for RestrictedSetValues, return this.
      *
-     * @param restrictedSetValues
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link java.lang.String} object.
      */
     public SellerInputDefinition withRestrictedSetValues(String... values) {
         List<String> list = getRestrictedSetValues();
@@ -373,10 +365,9 @@ public class SellerInputDefinition extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -390,10 +381,9 @@ public class SellerInputDefinition extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -407,17 +397,24 @@ public class SellerInputDefinition extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "SellerInputDefinition",this);
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param isRequired a boolean.
+     * @param dataType a {@link java.lang.String} object.
+     * @param constraints a {@link java.util.List} object.
+     * @param inputDisplayText a {@link java.lang.String} object.
+     * @param storedValue a {@link com.amazonaws.mws.merchantfulfillment.model.AdditionalSellerInput} object.
+     */
     public SellerInputDefinition(boolean isRequired,String dataType,List<Constraint> constraints,String inputDisplayText,AdditionalSellerInput storedValue) {
         this.isRequired = isRequired;
         this.dataType = dataType;
@@ -426,7 +423,9 @@ public class SellerInputDefinition extends AbstractMwsObject {
         this.storedValue = storedValue;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public SellerInputDefinition() {
         super();
     }

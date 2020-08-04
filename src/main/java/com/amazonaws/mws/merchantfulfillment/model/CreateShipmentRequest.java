@@ -95,7 +95,6 @@ public class CreateShipmentRequest extends AbstractMwsObject {
      *
      * @param sellerId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public CreateShipmentRequest withSellerId(String sellerId) {
@@ -136,7 +135,6 @@ public class CreateShipmentRequest extends AbstractMwsObject {
      *
      * @param mwsAuthToken
      *             The new value to set.
-     *
      * @return This instance.
      */
     public CreateShipmentRequest withMWSAuthToken(String mwsAuthToken) {
@@ -177,7 +175,6 @@ public class CreateShipmentRequest extends AbstractMwsObject {
      *
      * @param shipmentRequestDetails
      *             The new value to set.
-     *
      * @return This instance.
      */
     public CreateShipmentRequest withShipmentRequestDetails(ShipmentRequestDetails shipmentRequestDetails) {
@@ -218,7 +215,6 @@ public class CreateShipmentRequest extends AbstractMwsObject {
      *
      * @param shippingServiceId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public CreateShipmentRequest withShippingServiceId(String shippingServiceId) {
@@ -259,7 +255,6 @@ public class CreateShipmentRequest extends AbstractMwsObject {
      *
      * @param shippingServiceOfferId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public CreateShipmentRequest withShippingServiceOfferId(String shippingServiceOfferId) {
@@ -300,7 +295,6 @@ public class CreateShipmentRequest extends AbstractMwsObject {
      *
      * @param hazmatType
      *             The new value to set.
-     *
      * @return This instance.
      */
     public CreateShipmentRequest withHazmatType(String hazmatType) {
@@ -341,7 +335,6 @@ public class CreateShipmentRequest extends AbstractMwsObject {
      *
      * @param labelFormatOption
      *             The new value to set.
-     *
      * @return This instance.
      */
     public CreateShipmentRequest withLabelFormatOption(LabelFormatOptionRequest labelFormatOption) {
@@ -390,10 +383,8 @@ public class CreateShipmentRequest extends AbstractMwsObject {
     /**
      * Add values for ShipmentLevelSellerInputsList, return this.
      *
-     * @param shipmentLevelSellerInputsList
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.AdditionalSellerInputs} object.
      */
     public CreateShipmentRequest withShipmentLevelSellerInputsList(AdditionalSellerInputs... values) {
         List<AdditionalSellerInputs> list = getShipmentLevelSellerInputsList();
@@ -404,10 +395,9 @@ public class CreateShipmentRequest extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -422,10 +412,9 @@ public class CreateShipmentRequest extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -440,17 +429,24 @@ public class CreateShipmentRequest extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "CreateShipmentRequest",this);
     }
 
-    /** Legacy Value constructor - DEPRECATED: mwsAuthToken is not part of this request object. This is kept for legacy support purposes.*/
+    /**
+     * Legacy Value constructor - DEPRECATED: mwsAuthToken is not part of this request object. This is kept for legacy support purposes.
+     *
+     * @param sellerId a {@link java.lang.String} object.
+     * @param mwsAuthToken a {@link java.lang.String} object.
+     * @param shipmentRequestDetails a {@link com.amazonaws.mws.merchantfulfillment.model.ShipmentRequestDetails} object.
+     * @param shippingServiceId a {@link java.lang.String} object.
+     * @param shippingServiceOfferId a {@link java.lang.String} object.
+     */
     public CreateShipmentRequest(String sellerId,String mwsAuthToken,ShipmentRequestDetails shipmentRequestDetails,String shippingServiceId,String shippingServiceOfferId) {
         this.sellerId = sellerId;
         this.mwsAuthToken = mwsAuthToken;
@@ -459,7 +455,14 @@ public class CreateShipmentRequest extends AbstractMwsObject {
         this.shippingServiceOfferId = shippingServiceOfferId;
     }
     
-    /** Legacy value constructor. */
+    /**
+     * Legacy value constructor.
+     *
+     * @param sellerId a {@link java.lang.String} object.
+     * @param shipmentRequestDetails a {@link com.amazonaws.mws.merchantfulfillment.model.ShipmentRequestDetails} object.
+     * @param shippingServiceId a {@link java.lang.String} object.
+     * @param shippingServiceOfferId a {@link java.lang.String} object.
+     */
     public CreateShipmentRequest(String sellerId,ShipmentRequestDetails shipmentRequestDetails,String shippingServiceId,String shippingServiceOfferId) {
         this.sellerId = sellerId;
         this.shipmentRequestDetails = shipmentRequestDetails;
@@ -467,14 +470,22 @@ public class CreateShipmentRequest extends AbstractMwsObject {
         this.shippingServiceOfferId = shippingServiceOfferId;
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param sellerId a {@link java.lang.String} object.
+     * @param shipmentRequestDetails a {@link com.amazonaws.mws.merchantfulfillment.model.ShipmentRequestDetails} object.
+     * @param shippingServiceId a {@link java.lang.String} object.
+     */
     public CreateShipmentRequest(String sellerId,ShipmentRequestDetails shipmentRequestDetails,String shippingServiceId) {
         this.sellerId = sellerId;
         this.shipmentRequestDetails = shipmentRequestDetails;
         this.shippingServiceId = shippingServiceId;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public CreateShipmentRequest() {
         super();
     }

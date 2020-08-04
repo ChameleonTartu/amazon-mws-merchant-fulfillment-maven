@@ -97,7 +97,6 @@ public class AdditionalSellerInput extends AbstractMwsObject {
      *
      * @param dataType
      *             The new value to set.
-     *
      * @return This instance.
      */
     public AdditionalSellerInput withDataType(String dataType) {
@@ -138,7 +137,6 @@ public class AdditionalSellerInput extends AbstractMwsObject {
      *
      * @param valueAsString
      *             The new value to set.
-     *
      * @return This instance.
      */
     public AdditionalSellerInput withValueAsString(String valueAsString) {
@@ -188,7 +186,6 @@ public class AdditionalSellerInput extends AbstractMwsObject {
      *
      * @param valueAsBoolean
      *             The new value to set.
-     *
      * @return This instance.
      */
     public AdditionalSellerInput withValueAsBoolean(Boolean valueAsBoolean) {
@@ -229,7 +226,6 @@ public class AdditionalSellerInput extends AbstractMwsObject {
      *
      * @param valueAsInteger
      *             The new value to set.
-     *
      * @return This instance.
      */
     public AdditionalSellerInput withValueAsInteger(Integer valueAsInteger) {
@@ -270,7 +266,6 @@ public class AdditionalSellerInput extends AbstractMwsObject {
      *
      * @param valueAsTimestamp
      *             The new value to set.
-     *
      * @return This instance.
      */
     public AdditionalSellerInput withValueAsTimestamp(XMLGregorianCalendar valueAsTimestamp) {
@@ -311,7 +306,6 @@ public class AdditionalSellerInput extends AbstractMwsObject {
      *
      * @param valueAsAddress
      *             The new value to set.
-     *
      * @return This instance.
      */
     public AdditionalSellerInput withValueAsAddress(Address valueAsAddress) {
@@ -352,7 +346,6 @@ public class AdditionalSellerInput extends AbstractMwsObject {
      *
      * @param valueAsWeight
      *             The new value to set.
-     *
      * @return This instance.
      */
     public AdditionalSellerInput withValueAsWeight(Weight valueAsWeight) {
@@ -393,7 +386,6 @@ public class AdditionalSellerInput extends AbstractMwsObject {
      *
      * @param valueAsDimension
      *             The new value to set.
-     *
      * @return This instance.
      */
     public AdditionalSellerInput withValueAsDimension(Length valueAsDimension) {
@@ -434,7 +426,6 @@ public class AdditionalSellerInput extends AbstractMwsObject {
      *
      * @param valueAsCurrency
      *             The new value to set.
-     *
      * @return This instance.
      */
     public AdditionalSellerInput withValueAsCurrency(CurrencyAmount valueAsCurrency) {
@@ -443,10 +434,9 @@ public class AdditionalSellerInput extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -462,10 +452,9 @@ public class AdditionalSellerInput extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -481,10 +470,9 @@ public class AdditionalSellerInput extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
@@ -492,7 +480,9 @@ public class AdditionalSellerInput extends AbstractMwsObject {
     }
 
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public AdditionalSellerInput() {
         super();
     }

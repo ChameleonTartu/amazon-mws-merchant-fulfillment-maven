@@ -17,21 +17,20 @@ import com.amazonservices.mws.client.MwsObject;
 
 /**
  * Interface implemented by responses.
- * 
- * @author mayerj
+ *
  */
 public interface MWSResponse extends MwsObject {
 
     /**
      * Set the response header metadata.
-     * 
-     * @param rhmd
+     *
+     * @param rhmd a {@link com.amazonaws.mws.merchantfulfillment.model.ResponseHeaderMetadata} object.
      */
     public void setResponseHeaderMetadata(ResponseHeaderMetadata rhmd);
 
     /**
      * Get the response header metadata.
-     * 
+     *
      * @return The response header metadata.
      */
     public ResponseHeaderMetadata getResponseHeaderMetadata();

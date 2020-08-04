@@ -34,6 +34,7 @@ import com.amazonservices.mws.client.*;
  *    &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ *
  */
 public class GetShipmentResponse extends AbstractMwsObject implements MWSResponse {
 
@@ -76,7 +77,6 @@ public class GetShipmentResponse extends AbstractMwsObject implements MWSRespons
      *
      * @param getShipmentResult
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetShipmentResponse withGetShipmentResult(GetShipmentResult getShipmentResult) {
@@ -117,7 +117,6 @@ public class GetShipmentResponse extends AbstractMwsObject implements MWSRespons
      *
      * @param responseMetadata
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetShipmentResponse withResponseMetadata(ResponseMetadata responseMetadata) {
@@ -135,10 +134,9 @@ public class GetShipmentResponse extends AbstractMwsObject implements MWSRespons
     }
 
     /**
-     * Set the value of ResponseHeaderMetadata.
+     * {@inheritDoc}
      *
-     * @param responseHeaderMetadata
-     *            The new value to set.
+     * Set the value of ResponseHeaderMetadata.
      */
     public void setResponseHeaderMetadata(ResponseHeaderMetadata responseHeaderMetadata) {
         this.responseHeaderMetadata = responseHeaderMetadata;
@@ -158,7 +156,6 @@ public class GetShipmentResponse extends AbstractMwsObject implements MWSRespons
      *
      * @param responseHeaderMetadata
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetShipmentResponse withResponseHeaderMetadata(ResponseHeaderMetadata responseHeaderMetadata) {
@@ -167,10 +164,9 @@ public class GetShipmentResponse extends AbstractMwsObject implements MWSRespons
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -179,10 +175,9 @@ public class GetShipmentResponse extends AbstractMwsObject implements MWSRespons
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -191,10 +186,9 @@ public class GetShipmentResponse extends AbstractMwsObject implements MWSRespons
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
@@ -202,13 +196,20 @@ public class GetShipmentResponse extends AbstractMwsObject implements MWSRespons
     }
 
 
-    /** Legacy Value constructor. */
+    /**
+     * Legacy Value constructor.
+     *
+     * @param getShipmentResult a {@link com.amazonaws.mws.merchantfulfillment.model.GetShipmentResult} object.
+     * @param responseMetadata a {@link com.amazonaws.mws.merchantfulfillment.model.ResponseMetadata} object.
+     */
     public GetShipmentResponse(GetShipmentResult getShipmentResult,ResponseMetadata responseMetadata) {
         this.getShipmentResult = getShipmentResult;
         this.responseMetadata = responseMetadata;
     }
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public GetShipmentResponse() {
         super();
     }

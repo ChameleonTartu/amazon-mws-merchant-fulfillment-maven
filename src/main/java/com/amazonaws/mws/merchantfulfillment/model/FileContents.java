@@ -77,7 +77,6 @@ public class FileContents extends AbstractMwsObject {
      *
      * @param contents
      *             The new value to set.
-     *
      * @return This instance.
      */
     public FileContents withContents(String contents) {
@@ -118,7 +117,6 @@ public class FileContents extends AbstractMwsObject {
      *
      * @param fileType
      *             The new value to set.
-     *
      * @return This instance.
      */
     public FileContents withFileType(String fileType) {
@@ -159,7 +157,6 @@ public class FileContents extends AbstractMwsObject {
      *
      * @param checksum
      *             The new value to set.
-     *
      * @return This instance.
      */
     public FileContents withChecksum(String checksum) {
@@ -168,10 +165,9 @@ public class FileContents extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -181,10 +177,9 @@ public class FileContents extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -194,24 +189,31 @@ public class FileContents extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "FileContents",this);
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param contents a {@link java.lang.String} object.
+     * @param fileType a {@link java.lang.String} object.
+     * @param checksum a {@link java.lang.String} object.
+     */
     public FileContents(String contents,String fileType,String checksum) {
         this.contents = contents;
         this.fileType = fileType;
         this.checksum = checksum;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public FileContents() {
         super();
     }

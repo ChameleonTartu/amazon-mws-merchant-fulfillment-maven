@@ -83,7 +83,6 @@ public class RejectedShippingService extends AbstractMwsObject {
      *
      * @param carrierName
      *             The new value to set.
-     *
      * @return This instance.
      */
     public RejectedShippingService withCarrierName(String carrierName) {
@@ -124,7 +123,6 @@ public class RejectedShippingService extends AbstractMwsObject {
      *
      * @param shippingServiceName
      *             The new value to set.
-     *
      * @return This instance.
      */
     public RejectedShippingService withShippingServiceName(String shippingServiceName) {
@@ -165,7 +163,6 @@ public class RejectedShippingService extends AbstractMwsObject {
      *
      * @param shippingServiceId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public RejectedShippingService withShippingServiceId(String shippingServiceId) {
@@ -206,7 +203,6 @@ public class RejectedShippingService extends AbstractMwsObject {
      *
      * @param rejectionReasonCode
      *             The new value to set.
-     *
      * @return This instance.
      */
     public RejectedShippingService withRejectionReasonCode(String rejectionReasonCode) {
@@ -247,7 +243,6 @@ public class RejectedShippingService extends AbstractMwsObject {
      *
      * @param rejectionReasonMessage
      *             The new value to set.
-     *
      * @return This instance.
      */
     public RejectedShippingService withRejectionReasonMessage(String rejectionReasonMessage) {
@@ -256,10 +251,9 @@ public class RejectedShippingService extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -271,10 +265,9 @@ public class RejectedShippingService extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -286,17 +279,23 @@ public class RejectedShippingService extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "RejectedShippingService",this);
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param carrierName a {@link java.lang.String} object.
+     * @param shippingServiceName a {@link java.lang.String} object.
+     * @param shippingServiceId a {@link java.lang.String} object.
+     * @param rejectionReasonCode a {@link java.lang.String} object.
+     */
     public RejectedShippingService(String carrierName,String shippingServiceName,String shippingServiceId,String rejectionReasonCode) {
         this.carrierName = carrierName;
         this.shippingServiceName = shippingServiceName;
@@ -304,7 +303,9 @@ public class RejectedShippingService extends AbstractMwsObject {
         this.rejectionReasonCode = rejectionReasonCode;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public RejectedShippingService() {
         super();
     }

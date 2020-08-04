@@ -80,7 +80,6 @@ public class GetEligibleShippingServicesRequest extends AbstractMwsObject {
      *
      * @param sellerId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetEligibleShippingServicesRequest withSellerId(String sellerId) {
@@ -121,7 +120,6 @@ public class GetEligibleShippingServicesRequest extends AbstractMwsObject {
      *
      * @param mwsAuthToken
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetEligibleShippingServicesRequest withMWSAuthToken(String mwsAuthToken) {
@@ -162,7 +160,6 @@ public class GetEligibleShippingServicesRequest extends AbstractMwsObject {
      *
      * @param shipmentRequestDetails
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetEligibleShippingServicesRequest withShipmentRequestDetails(ShipmentRequestDetails shipmentRequestDetails) {
@@ -203,7 +200,6 @@ public class GetEligibleShippingServicesRequest extends AbstractMwsObject {
      *
      * @param shippingOfferingFilter
      *             The new value to set.
-     *
      * @return This instance.
      */
     public GetEligibleShippingServicesRequest withShippingOfferingFilter(ShippingOfferingFilter shippingOfferingFilter) {
@@ -212,10 +208,9 @@ public class GetEligibleShippingServicesRequest extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -226,10 +221,9 @@ public class GetEligibleShippingServicesRequest extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -240,30 +234,42 @@ public class GetEligibleShippingServicesRequest extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "GetEligibleShippingServicesRequest",this);
     }
 
-    /** Legacy Value constructor - DEPRECATED: mwsAuthToken is not part of this request object. This is kept for legacy support purposes.*/
+    /**
+     * Legacy Value constructor - DEPRECATED: mwsAuthToken is not part of this request object. This is kept for legacy support purposes.
+     *
+     * @param sellerId a {@link java.lang.String} object.
+     * @param mwsAuthToken a {@link java.lang.String} object.
+     * @param shipmentRequestDetails a {@link com.amazonaws.mws.merchantfulfillment.model.ShipmentRequestDetails} object.
+     */
     public GetEligibleShippingServicesRequest(String sellerId,String mwsAuthToken,ShipmentRequestDetails shipmentRequestDetails) {
         this.sellerId = sellerId;
         this.mwsAuthToken = mwsAuthToken;
         this.shipmentRequestDetails = shipmentRequestDetails;
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param sellerId a {@link java.lang.String} object.
+     * @param shipmentRequestDetails a {@link com.amazonaws.mws.merchantfulfillment.model.ShipmentRequestDetails} object.
+     */
     public GetEligibleShippingServicesRequest(String sellerId,ShipmentRequestDetails shipmentRequestDetails) {
         this.sellerId = sellerId;
         this.shipmentRequestDetails = shipmentRequestDetails;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public GetEligibleShippingServicesRequest() {
         super();
     }

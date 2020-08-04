@@ -30,10 +30,8 @@ public interface MWSMerchantFulfillmentService {
      *
      * @param request
      *           CancelShipmentRequest request.
-     *
      * @return CancelShipmentResponse response.
-     *
-     * @throws MWSMerchantFulfillmentServiceException
+     * @throws com.amazonaws.mws.merchantfulfillment.MWSMerchantFulfillmentServiceException {@link MWSMerchantFulfillmentServiceException}
      */
     CancelShipmentResponse cancelShipment(
         CancelShipmentRequest request)
@@ -47,10 +45,8 @@ public interface MWSMerchantFulfillmentService {
      *
      * @param request
      *           CreateShipmentRequest request.
-     *
      * @return CreateShipmentResponse response.
-     *
-     * @throws MWSMerchantFulfillmentServiceException
+     * @throws com.amazonaws.mws.merchantfulfillment.MWSMerchantFulfillmentServiceException {@link MWSMerchantFulfillmentServiceException}
      */
     CreateShipmentResponse createShipment(
         CreateShipmentRequest request)
@@ -64,10 +60,8 @@ public interface MWSMerchantFulfillmentService {
      *
      * @param request
      *           GetAdditionalSellerInputsRequest request.
-     *
      * @return GetAdditionalSellerInputsResponse response.
-     *
-     * @throws MWSMerchantFulfillmentServiceException
+     * @throws com.amazonaws.mws.merchantfulfillment.MWSMerchantFulfillmentServiceException {@link MWSMerchantFulfillmentServiceException}
      */
     GetAdditionalSellerInputsResponse getAdditionalSellerInputs(
         GetAdditionalSellerInputsRequest request)
@@ -82,10 +76,8 @@ public interface MWSMerchantFulfillmentService {
      *
      * @param request
      *           GetEligibleShippingServicesRequest request.
-     *
      * @return GetEligibleShippingServicesResponse response.
-     *
-     * @throws MWSMerchantFulfillmentServiceException
+     * @throws com.amazonaws.mws.merchantfulfillment.MWSMerchantFulfillmentServiceException {@link MWSMerchantFulfillmentServiceException}
      */
     GetEligibleShippingServicesResponse getEligibleShippingServices(
         GetEligibleShippingServicesRequest request)
@@ -98,10 +90,8 @@ public interface MWSMerchantFulfillmentService {
      *
      * @param request
      *           GetShipmentRequest request.
-     *
      * @return GetShipmentResponse response.
-     *
-     * @throws MWSMerchantFulfillmentServiceException
+     * @throws com.amazonaws.mws.merchantfulfillment.MWSMerchantFulfillmentServiceException {@link MWSMerchantFulfillmentServiceException}
      */
     GetShipmentResponse getShipment(
         GetShipmentRequest request)
@@ -110,14 +100,10 @@ public interface MWSMerchantFulfillmentService {
     /**
      * Get Service Status
      *
-     * 
-     *
      * @param request
      *           GetServiceStatusRequest request.
-     *
      * @return GetServiceStatusResponse response.
-     *
-     * @throws MWSMerchantFulfillmentServiceException
+     * @throws com.amazonaws.mws.merchantfulfillment.MWSMerchantFulfillmentServiceException {@link MWSMerchantFulfillmentServiceException}
      */
     GetServiceStatusResponse getServiceStatus(
         GetServiceStatusRequest request)

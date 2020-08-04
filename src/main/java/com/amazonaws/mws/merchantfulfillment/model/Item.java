@@ -89,7 +89,6 @@ public class Item extends AbstractMwsObject {
      *
      * @param orderItemId
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Item withOrderItemId(String orderItemId) {
@@ -121,7 +120,6 @@ public class Item extends AbstractMwsObject {
      *
      * @param quantity
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Item withQuantity(int quantity) {
@@ -170,10 +168,8 @@ public class Item extends AbstractMwsObject {
     /**
      * Add values for transparencyCodeList, return this.
      *
-     * @param transparencyCodeList
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link java.lang.String} object.
      */
     public Item withTransparencyCodeList(String... values) {
         List<String> list = getTransparencyCodeList();
@@ -224,10 +220,8 @@ public class Item extends AbstractMwsObject {
     /**
      * Add values for ItemLevelSellerInputsList, return this.
      *
-     * @param itemLevelSellerInputsList
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.AdditionalSellerInputs} object.
      */
     public Item withItemLevelSellerInputsList(AdditionalSellerInputs... values) {
         List<AdditionalSellerInputs> list = getItemLevelSellerInputsList();
@@ -270,7 +264,6 @@ public class Item extends AbstractMwsObject {
      *
      * @param itemWeight
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Item withItemWeight(Weight itemWeight) {
@@ -311,7 +304,6 @@ public class Item extends AbstractMwsObject {
      *
      * @param itemDescription
      *             The new value to set.
-     *
      * @return This instance.
      */
     public Item withItemDescription(String itemDescription) {
@@ -320,10 +312,9 @@ public class Item extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -336,10 +327,9 @@ public class Item extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -352,23 +342,29 @@ public class Item extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
         w.write("https://mws.amazonservices.com/MerchantFulfillment/2015-06-01", "Item",this);
     }
 
-    /** Value constructor. */
+    /**
+     * Value constructor.
+     *
+     * @param orderItemId a {@link java.lang.String} object.
+     * @param quantity a int.
+     */
     public Item(String orderItemId,int quantity) {
         this.orderItemId = orderItemId;
         this.quantity = quantity;
     }    
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public Item() {
         super();
     }

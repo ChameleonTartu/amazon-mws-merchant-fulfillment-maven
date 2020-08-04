@@ -85,10 +85,8 @@ public class GetAdditionalSellerInputsResult extends AbstractMwsObject {
     /**
      * Add values for ShipmentLevelFields, return this.
      *
-     * @param shipmentLevelFields
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.AdditionalInputs} object.
      */
     public GetAdditionalSellerInputsResult withShipmentLevelFields(AdditionalInputs... values) {
         List<AdditionalInputs> list = getShipmentLevelFields();
@@ -139,10 +137,8 @@ public class GetAdditionalSellerInputsResult extends AbstractMwsObject {
     /**
      * Add values for ItemLevelFieldsList, return this.
      *
-     * @param itemLevelFieldsList
-     *             New values to add.
-     *
      * @return This instance.
+     * @param values a {@link com.amazonaws.mws.merchantfulfillment.model.ItemLevelFields} object.
      */
     public GetAdditionalSellerInputsResult withItemLevelFieldsList(ItemLevelFields... values) {
         List<ItemLevelFields> list = getItemLevelFieldsList();
@@ -153,10 +149,9 @@ public class GetAdditionalSellerInputsResult extends AbstractMwsObject {
     }
 
     /**
-     * Read members from a MwsReader.
+     * {@inheritDoc}
      *
-     * @param r
-     *      The reader to read from.
+     * Read members from a MwsReader.
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
@@ -165,10 +160,9 @@ public class GetAdditionalSellerInputsResult extends AbstractMwsObject {
     }
 
     /**
-     * Write members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *      The writer to write to.
+     * Write members to a MwsWriter.
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
@@ -177,10 +171,9 @@ public class GetAdditionalSellerInputsResult extends AbstractMwsObject {
     }
 
     /**
-     * Write tag, xmlns and members to a MwsWriter.
+     * {@inheritDoc}
      *
-     * @param w
-     *         The Writer to write to.
+     * Write tag, xmlns and members to a MwsWriter.
      */
     @Override
     public void writeTo(MwsWriter w) {
@@ -188,7 +181,9 @@ public class GetAdditionalSellerInputsResult extends AbstractMwsObject {
     }
 
 
-    /** Default constructor. */
+    /**
+     * Default constructor.
+     */
     public GetAdditionalSellerInputsResult() {
         super();
     }

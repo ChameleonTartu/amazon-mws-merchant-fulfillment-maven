@@ -18,6 +18,9 @@ package com.amazonaws.mws.merchantfulfillment;
 import com.amazonaws.mws.merchantfulfillment.model.*;
 import com.amazonservices.mws.client.*;
 
+/**
+ * <p>MWSMerchantFulfillmentServiceClient class.</p>
+ */
 public class MWSMerchantFulfillmentServiceClient implements MWSMerchantFulfillmentService {
 
     private static final String libraryName = "MWSMerchantFulfillmentService";
@@ -28,6 +31,15 @@ public class MWSMerchantFulfillmentServiceClient implements MWSMerchantFulfillme
 
     protected final MwsConnection connection;
 
+    /**
+     * <p>Constructor for MWSMerchantFulfillmentServiceClient.</p>
+     *
+     * @param accessKey a {@link java.lang.String} object.
+     * @param secretKey a {@link java.lang.String} object.
+     * @param applicationName a {@link java.lang.String} object.
+     * @param applicationVersion a {@link java.lang.String} object.
+     * @param config a {@link com.amazonaws.mws.merchantfulfillment.MWSMerchantFulfillmentServiceConfig} object.
+     */
     public MWSMerchantFulfillmentServiceClient(
             String accessKey,
             String secretKey,
@@ -43,6 +55,13 @@ public class MWSMerchantFulfillmentServiceClient implements MWSMerchantFulfillme
         servicePath = config.getServicePath();
     }
 
+    /**
+     * <p>Constructor for MWSMerchantFulfillmentServiceClient.</p>
+     *
+     * @param accessKey a {@link java.lang.String} object.
+     * @param secretKey a {@link java.lang.String} object.
+     * @param config a {@link com.amazonaws.mws.merchantfulfillment.MWSMerchantFulfillmentServiceConfig} object.
+     */
     public MWSMerchantFulfillmentServiceClient(
             String accessKey,
             String secretKey,
@@ -50,6 +69,14 @@ public class MWSMerchantFulfillmentServiceClient implements MWSMerchantFulfillme
         this(accessKey, secretKey, libraryName, libraryVersion, config);
     }
 
+    /**
+     * <p>Constructor for MWSMerchantFulfillmentServiceClient.</p>
+     *
+     * @param accessKey a {@link java.lang.String} object.
+     * @param secretKey a {@link java.lang.String} object.
+     * @param applicationName a {@link java.lang.String} object.
+     * @param applicationVersion a {@link java.lang.String} object.
+     */
     public MWSMerchantFulfillmentServiceClient(
             String accessKey,
             String secretKey,
@@ -59,54 +86,84 @@ public class MWSMerchantFulfillmentServiceClient implements MWSMerchantFulfillme
                 applicationVersion, new MWSMerchantFulfillmentServiceConfig());
     }
 
+    /** {@inheritDoc} */
     public CancelShipmentResponse cancelShipment(CancelShipmentRequest request) {
         return connection.call(
             new RequestType("CancelShipment", CancelShipmentResponse.class, servicePath),
             request);
     }
 
+    /** {@inheritDoc} */
     public CreateShipmentResponse createShipment(CreateShipmentRequest request) {
         return connection.call(
             new RequestType("CreateShipment", CreateShipmentResponse.class, servicePath),
             request);
     }
 
+    /** {@inheritDoc} */
     public GetAdditionalSellerInputsResponse getAdditionalSellerInputs(GetAdditionalSellerInputsRequest request) {
         return connection.call(
             new RequestType("GetAdditionalSellerInputs", GetAdditionalSellerInputsResponse.class, servicePath),
             request);
     }
 
+    /** {@inheritDoc} */
     public GetEligibleShippingServicesResponse getEligibleShippingServices(GetEligibleShippingServicesRequest request) {
         return connection.call(
             new RequestType("GetEligibleShippingServices", GetEligibleShippingServicesResponse.class, servicePath),
             request);
     }
 
+    /** {@inheritDoc} */
     public GetShipmentResponse getShipment(GetShipmentRequest request) {
         return connection.call(
             new RequestType("GetShipment", GetShipmentResponse.class, servicePath),
             request);
     }
 
+    /** {@inheritDoc} */
     public GetServiceStatusResponse getServiceStatus(GetServiceStatusRequest request) {
         return connection.call(
             new RequestType("GetServiceStatus", GetServiceStatusResponse.class, servicePath),
             request);
     }
 
+    /**
+     * <p>quoteAppName.</p>
+     *
+     * @param s a {@link java.lang.String} object.
+     * @return a {@link java.lang.String} object.
+     */
     public static String quoteAppName(String s) {
         return MwsUtl.escapeAppName(s);
     }
 
+    /**
+     * <p>quoteAppVersion.</p>
+     *
+     * @param s a {@link java.lang.String} object.
+     * @return a {@link java.lang.String} object.
+     */
     public static String quoteAppVersion(String s) {
         return MwsUtl.escapeAppVersion(s);
     }
 
+    /**
+     * <p>quoteAttributeName.</p>
+     *
+     * @param s a {@link java.lang.String} object.
+     * @return a {@link java.lang.String} object.
+     */
     public static String quoteAttributeName(String s) {
         return MwsUtl.escapeAttributeName(s);
     }
 
+    /**
+     * <p>quoteAttributeValue.</p>
+     *
+     * @param s a {@link java.lang.String} object.
+     * @return a {@link java.lang.String} object.
+     */
     public static String quoteAttributeValue(String s) {
         return MwsUtl.escapeAttributeValue(s);
     }
